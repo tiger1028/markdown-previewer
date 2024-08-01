@@ -8,10 +8,15 @@ export const Container = styled.div`
   display: flex;
   gap: 24px;
   padding: 24px;
+
+  @media screen and (max-width: 1200px) {
+    flex-direction: column;
+  }
 `;
 
 export const MarkdownContainer = styled.div`
   width: 100%;
+  height: 100%;
 
   display: flex;
   flex-direction: column;
