@@ -1,5 +1,5 @@
 import React from "react";
-import { RawMarkdownInput } from "./style";
+import { Container, RawMarkdownInput } from "./style";
 
 interface RawMarkdownInputComponent {
   value: string;
@@ -16,5 +16,10 @@ export const RawMarkdownInputComponent: React.FC<RawMarkdownInputComponent> = ({
     onChange(event.target.value);
   };
 
-  return <RawMarkdownInput value={value} onChange={onRawMarkdownChange} />;
+  return (
+    <Container>
+      <h3>Please input text below you want to convert to Markdown!</h3>
+      <RawMarkdownInput value={value} onChange={onRawMarkdownChange} />
+    </Container>
+  );
 };
